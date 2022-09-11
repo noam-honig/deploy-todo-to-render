@@ -5,10 +5,10 @@ import { TasksController } from '../shared/TasksController';
 import { createPostgresConnection } from "remult/postgres";
 
 export const api = remultExpress({
-    // dataProvider: process.env["NODE_ENV"] === "production" ?
-    //     createPostgresConnection({
-    //         configuration: "heroku"
-    //     }) : undefined,
+    dataProvider: process.env["NODE_ENV"] === "production" ?
+        createPostgresConnection({
+            configuration: "heroku"
+        }) : undefined,
     getUser: request => request.session!['user'],
     entities: [Task],
     controllers: [TasksController],
