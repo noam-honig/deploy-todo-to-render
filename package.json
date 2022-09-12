@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "concurrently -k -n \"API,WEB\" -c \"bgBlue.bold,bgGreen.bold\" \"ts-node-dev -P tsconfig.server.json src/server/\" \"vite\"",
     "start": "node dist/server/",
-    "build": "tsc && vite build && tsc -p tsconfig.server.json",
+    "build": "npm i && tsc && vite build && tsc -p tsconfig.server.json",
     "preview": "vite preview"
   },
   
