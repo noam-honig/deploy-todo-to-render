@@ -8,6 +8,7 @@
     "build": "tsc && vite build && tsc -p tsconfig.server.json",
     "preview": "vite preview"
   },
+  
   "dependencies": {
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.6",
